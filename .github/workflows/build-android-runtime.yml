@@ -37,6 +37,11 @@ jobs:
         with:
           ref: ${{ inputs.ref }}
 
+      - name: Install build utils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-multilib g++-multilib
+
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
