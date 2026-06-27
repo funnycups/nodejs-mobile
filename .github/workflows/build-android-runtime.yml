@@ -6,7 +6,7 @@ on:
       ref:
         description: "Git ref to build (branch/tag/commit)"
         required: false
-        default: "update-v24.5.0"
+        default: "main"
       sdk_version:
         description: "Android SDK API level passed to android_build.sh"
         required: false
