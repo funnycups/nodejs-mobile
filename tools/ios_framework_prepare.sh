@@ -16,6 +16,18 @@ TARGET_LIBRARY_PATH='tools/ios-framework/bin'
 NODELIB_PROJECT_PATH='tools/ios-framework'
 XCODE_PROJECT_PATH='tools/ios-framework/NodeMobile.xcodeproj/project.pbxproj'
 
+# Node.js 24.5.0 supports Python 3.9-3.13.
+if ! python3 -c 'import sys; sys.exit(0 if (3, 9) <= sys.version_info < (3, 14) else 1)' 2>/dev/null; then
+  echo "Node.js 24.5.0 requires Python 3.9-3.13; found $(python3 --version 2>&1)." >&2
+  echo "Activate a python3.12 virtualenv before running this script." >&2
+  exit 1
+fi
+
+if ! xcrun --sdk iphoneos --show-sdk-path >/dev/null 2>&1; then
+  echo "iphoneos SDK not found. Install Xcode and select it with xcode-select." >&2
+  exit 1
+fi
+
 declare -a outputs_common=(
   "libabseil.a"
   "libada.a"
