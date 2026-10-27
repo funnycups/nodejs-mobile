@@ -420,6 +420,10 @@
 					"-all_load",
 					"-v",
 					"-lstdc++",
+					"-licui18n",
+					"-licuucx",
+					"-licudata",
+					"-licustubdata",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.janeasystems.NodeMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +462,10 @@
 					"-all_load",
 					"-v",
 					"-lstdc++",
+					"-licui18n",
+					"-licuucx",
+					"-licudata",
+					"-licustubdata",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.janeasystems.NodeMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
