@@ -747,6 +747,12 @@
               }, {
                 'xcode_settings': {
                   'SDKROOT': 'iphonesimulator',
+                  'OTHER_CFLAGS': [
+                    '-g0'
+                  ],
+                  'OTHER_CPLUSPLUSFLAGS': [
+                    '-g0'
+                  ],
                 }
               }],
             ],
