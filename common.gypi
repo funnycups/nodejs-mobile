@@ -704,6 +704,8 @@
             'xcode_settings': {
               'SDKROOT': 'macosx',
               'MACOSX_DEPLOYMENT_TARGET': '13.5',   # Use macOS deployment target for host tools
+              'OTHER_CFLAGS': ['-g0'],
+              'OTHER_CPLUSPLUSFLAGS': ['-g0'],
               'WARNING_CFLAGS': [
                 '-Wall',
                 '-Wendif-labels',
@@ -734,12 +736,12 @@
               ['iossim!="true" and target_arch in "arm64 arm armv7s"', {
                 'xcode_settings': {
                   'SDKROOT': 'iphoneos',
-                  'ENABLE_BITCODE': 'YES',
+                  'ENABLE_BITCODE': 'NO',
                   'OTHER_CFLAGS': [
-                    '-fembed-bitcode'
+                    '-g0'
                   ],
                   'OTHER_CPLUSPLUSFLAGS': [
-                    '-fembed-bitcode'
+                    '-g0'
                   ],
                 }
               }, {
